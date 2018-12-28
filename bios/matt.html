@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+{{extend 'layout.html'}}
+
+{{block header}}
+{{end}}
+
 <html>
 <head>
 	<title>Matt</title>
@@ -115,7 +121,7 @@
 
 <center>
   <a>
-    <img src="matt_photos\DSC_0897.jpg" width="75%">
+    <img src="{{=URL('static', 'bios\matt_photos\DSC_0897.jpg)}}" width="75%">
   </a>
 </center>
 

@@ -13,6 +13,10 @@ def bio():
     response.flash = T("Hello World")
     return dict(message=T('Welcome to web2py!'))
 
+def matt():
+    response.flash = T("Hello World")
+    return dict(message=T('Welcome to web2py!'))
+
 # ---- API (example) -----
 @auth.requires_login()
 def api_get_user_email():
