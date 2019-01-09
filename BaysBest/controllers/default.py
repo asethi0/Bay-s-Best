@@ -6,17 +6,33 @@
 
 # ---- example index page ----
 def index():
-    response.flash = T("Hello World")
-    return dict(message=T('Welcome to web2py!'))
-		
+    return dict(title = "")
+    
 def bio():
-    response.flash = T("Hello World")
-    return dict(message=T('Welcome to web2py!'))
+    return dict(title = "")
 
 def matt():
-    response.flash = T("Hello World")
-    return dict(message=T('Welcome to web2py!'))
+    return dict(title = "MATT")
 
+def photos():
+    return dict(title = "PHOTOGRAPHY")
+		
+def upload():
+		return dict(title = "UPLOAD")
+
+def urban():
+    return dict(title = "URBAN")
+		
+def night():
+    return dict(title = "NIGHT")
+		
+def people():
+    return dict(title = "PEOPLE")
+		
+def nature():
+    return dict(title = "NATURE")
+		
+		
 # ---- API (example) -----
 @auth.requires_login()
 def api_get_user_email():

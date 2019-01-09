@@ -53,3 +53,25 @@ CREATE TABLE "auth_cas"(
     "renew" CHAR(1)
 );
 success!
+timestamp: 2019-01-07T14:16:01.367000
+CREATE TABLE "tags"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "created_on" TIMESTAMP
+);
+success!
+timestamp: 2019-01-07T14:16:01.403000
+CREATE TABLE "photos"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "created_on" TIMESTAMP,
+    "image_url" CHAR(512),
+    "tags" CHAR(512)
+);
+success!
+timestamp: 2019-01-07T14:16:47.958000
+ALTER TABLE "tags" ADD "name" CHAR(512);
+success!
+success!
+success!
+timestamp: 2019-01-08T13:14:56.668000
+ALTER TABLE "tags" ADD "category" CHAR(512);
+success!

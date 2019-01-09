@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+{{extend 'layout.html'}}
+
+{{block header}}
+
+<link rel="stylesheet" href="{{=URL('static','css/photos.css')}}"/>
+{{end}}
+
+<html>
+	<body>
+			<div class="plinkcontainer">
+				<a href="{{=URL('default','nature')}}">
+					<div class="nav_photo left">
+						<div class="nav_text"> Nature </div>
+						<img src="{{=URL('static', 'images/nav_photos/nature_btn.png')}}">
+					</div>
+				</a>
+				
+				<a href="{{=URL('default','night')}}">
+					<div class="nav_photo left">
+						<div class="nav_text"> Night </div>
+						<img src="{{=URL('static', 'images/nav_photos/night_btn.png')}}">
+					</div>
+				</a>
+				
+				<a href="{{=URL('default','people')}}">
+					<div class="nav_photo left">
+						<div class="nav_text"> People </div>
+						<img src="{{=URL('static', 'images/nav_photos/people_btn.png')}}">
+					</div>
+				</a>
+				
+				<a href="{{=URL('default','urban')}}">
+					<div class="nav_photo left">
+						<div class="nav_text"> Urban </div>
+						<img src="{{=URL('static', 'images/bios/matt_photos/DSC_0897.jpg')}}">
+					</div>
+				</a>
+				
+			</div>
+	</body>
+</html>

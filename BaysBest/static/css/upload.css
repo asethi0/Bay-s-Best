@@ -1,0 +1,20 @@
+.form_container{
+	margin-left: 5%;
+	margin-top: 50px;
+	width: 90%;
+	background-color: lightgray;
+	padding: 10px;
+	color: black;
+	border: 2px solid black;
+	border-radius: 2px;
+	font-size: 20px;
+}
+
+input[type=checkbox]{ 
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 10px;
+}

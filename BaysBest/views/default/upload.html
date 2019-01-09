@@ -1,0 +1,78 @@
+{{extend 'layout.html'}}
+
+{{block header}}
+
+<link rel="stylesheet" href="{{=URL('static','css/upload.css')}}"/>
+
+<script>
+	var get_tags_url = "{{=URL('api', 'get_tags')}}";
+	var add_tag_url = "{{=URL('api', 'add_tag')}}";
+</script>
+{{end}}
+
+<div class="form_container" id="upload_form">
+	<form v-cloak>
+		Select one or more images: <button>Upload Photo(s) With Current Tags</button>
+		<input type="file" name="img" multiple>
+		<!-- for each tag in database: create radio tick box -->
+		<!-- TODO: deal with categories and subcategories -->
+		
+		<strong>Tags:</strong>
+		<div> 
+		- Nature:
+			<div v-for="tag in tags">
+				<div v-if="tag.category == 'Nature'" style="margin-left: 20px">
+					<input type="checkbox"> ${tag.name} </input>
+				</div>
+			</div>
+		</div>
+		<br>
+		
+		<div> 
+		- Night:
+			<div v-for="tag in tags">
+				<div v-if="tag.category == 'Night'" style="margin-left: 20px">
+					<input type="checkbox"> ${tag.name} </input>
+				</div>
+			</div>
+		</div>
+		<br>
+		
+		<div> 
+		- Urban:
+			<div v-for="tag in tags">
+				<div v-if="tag.category == 'Urban'" style="margin-left: 20px">
+					<input type="checkbox"> ${tag.name} </input>
+				</div>
+			</div>
+		</div>
+		<br>
+		
+		<div> 
+		- People:
+			<div v-for="tag in tags">
+				<div v-if="tag.category == 'People'" style="margin-left: 20px">
+					<input type="checkbox"> ${tag.name} </input>
+				</div>
+			</div>
+		</div>
+		<br>
+		
+		<div>
+			Create a new Subcategory: 
+			<select name="Category" style="margin-left; 20px; width: 20%;" v-model="cur_category">
+				<option value="Nature">Nature</option>
+				<option value="Night">Night</option>
+				<option value="Urban">Urban</option>
+				<option value="People">People</option>
+			</select>
+			
+			<button v-if="new_tag != ''" v-on:click = "add_tag(new_tag)">Add Tag</button>
+			<input type="text" name="new_tag" v-model="new_tag" v-on:keydown.enter="add_tag(new_tag)">
+			Upload Subcategory Cover: <input type="file" name="img">
+		</div>
+		
+	</form>
+</div>
+
+<script src="{{=URL('static', 'js/upload.js')}}"></script>

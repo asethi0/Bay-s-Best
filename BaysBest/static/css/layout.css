@@ -1,18 +1,24 @@
 .main_header{
 	padding: 20px;
+	padding-left: 37px;
 	width: 100vw;
 	height: 100px;
 	background-color: rgba(0,0,0,0);
 	text-color: black;
-	font-family: verdana;
+	font-family: "Open Sans";
 	font-size: 50px;
 }
 
+.main_header a, .main_header a:link, .main_header a:visited, .main_header a:hover, .main_header a:focus, .main_header a:active{
+	color:black;
+}
+
 body{
-	width: 100vw;
-	height: 100vh;
 	background-color: rgba(0,0,0,0);
-	margin: 0;
+}
+
+[v-cloak]{
+	display:none;
 }
 
 #grad{
@@ -25,12 +31,25 @@ body{
 
 .btn_container{
 	float:right;
+	margin-right: 50px;
 }
 
 .bigbtn{
+	font-size:30px;
+	margin-right: 30px;
+}
+
+.droplink{
 	font-size:25px;
 }
 
-.bigbtn{
-	font-size:25px;
+.titlebar{
+	width: 100vw;	
+	height: 80px;
+	padding-top: 10px;
+	padding-left: 40px;
+	font-size: 40px;
+	border-top: solid black 2px;
+	border-bottom: solid black 2px;
+	font-family: times;
 }

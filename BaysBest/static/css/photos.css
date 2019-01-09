@@ -1,0 +1,45 @@
+.plinkcontainer{
+	width: 90%;
+	margin-left:5%;
+	margin-right:5%;
+	margin-top: 20px;
+	overflow:auto;
+}
+
+.nav_photo{
+	display: inline-block;
+	width: 50%;
+	padding: 10px;
+	text-align:center;
+	position:relative;
+}
+
+.nav_photo .right{
+	float:right;
+}
+
+.nav_photo .left{
+	float:left;
+}
+
+.nav_text {
+	padding: 15px;
+	border-radius: 4px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	color:white;
+	font-family: Tahoma, Verdana, Segoe, sans-serif;
+	font-size:62px;
+  transform: translate(-50%, -50%);
+	background-color: rgba(50, 50, 50, 0.8);
+}
+
+.nav_photo>img{
+	width:100%;
+	object-fit: cover;
+}
+
+select option{
+	font-size: 20px;
+}

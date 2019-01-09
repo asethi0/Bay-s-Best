@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+{{extend 'layout.html'}}
+
+{{block header}}
+
+<link rel="stylesheet" href="{{=URL('static','css/photos.css')}}"/>
+
+<script>
+	var get_tags_url = "{{=URL('api', 'get_tags')}}";
+</script>
+{{end}}
+
+<html>
+	<body>
+			<div v-cloak class="plinkcontainer" id="category_div">
+				
+				<div v-for="tag in tags">
+					<a v-if="tag.category == 'Urban'">
+						<div class="nav_photo left">
+							<div class="nav_text"> ${tag.name} </div>
+							<img src="{{=URL('static', 'images/nav_photos/nature_btn.png')}}">
+						</div>
+					</a>
+				</div>
+				
+			</div>
+	</body>
+</html>
+
+<script src="{{=URL('static', 'js/category.js')}}"></script>
