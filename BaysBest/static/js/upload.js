@@ -16,18 +16,35 @@ var app = function(){
 	}
 	
 	self.add_tag = function(){
-		console.log(self.vue.new_tag);
-		$.post(add_tag_url,
-			{
-				name: self.vue.new_tag,
-				category: self.vue.cur_category
-			},
-			function(data){
-				console.log("Tag created"); 
-			}
-		)
-		
-		self.get_tags();
+		if (self.vue.subcat_cover == ''){
+			alert("Please select a cover image");
+		}else{
+			console.log(self.vue.new_tag);
+			$.post(add_tag_url,
+				{
+					name: self.vue.new_tag,
+					category: self.vue.cur_category,
+					cover: self.vue.subcat_cover,
+				},
+				function(data){
+					console.log("Tag created"); 
+				}
+			)
+			self.get_tags();
+		}
+	}
+	
+	self.remove_tag = function(name){
+		if (confirm("Really delete '" + name + "'?")){
+			$.post(remove_tag_url,
+				{
+					name: name
+				},
+				function(data){
+					console.log("Tag Removed");
+				}
+			)
+		}
 	}
 	
 	self.vue = new Vue({
@@ -37,8 +54,10 @@ var app = function(){
 		data: { new_tag: '',
 			cur_category: 'Nature',
 			tags: [],
+			subcat_cover: ''
 		},
 		methods: {
+			remove_tags: self.remove_tag,
 			get_tags: self.get_tags,
 			add_tag: self.add_tag,
 		}

@@ -1,0 +1,65 @@
+.main_header{
+	padding: 20px;
+	padding-left: 37px;
+	width: 100vw;
+	height: 600px;
+	background-color: rgba(0,0,0,0);
+	text-color: white;
+	font-family: "Open Sans";
+	font-size: 50px;
+	overflow:auto;
+}
+
+#title{
+	color: white;
+	float:left;
+}
+
+.main_header a, .main_header a:link, .main_header a:visited, .main_header a:hover, .main_header a:focus, .main_header a:active{
+	color:black;
+}
+
+.transp{
+	background-color: rgba(255,255,255,0.2);
+}
+
+body{
+	background-color: rgba(0,0,0,0);
+}
+
+[v-cloak]{
+	display:none;
+}
+
+#grad{
+	background-image: linear-gradient(white, black);
+	width:100vw;
+	height:100vh;
+	position:fixed;
+	z-index:-1;
+}
+
+.btn_container{
+	float:right;
+	margin-right: 50px;
+}
+
+.bigbtn{
+	font-size:30px;
+	margin-right: 50px;
+}
+
+.droplink{
+	font-size:25px;
+}
+
+.titlebar{
+	width: 100vw;	
+	height: 80px;
+	padding-top: 10px;
+	padding-left: 40px;
+	font-size: 40px;
+	border-top: solid black 2px;
+	border-bottom: solid black 2px;
+	font-family: times;
+}

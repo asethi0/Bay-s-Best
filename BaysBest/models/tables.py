@@ -10,12 +10,13 @@
 db.define_table('tags',
 	Field('created_on', 'datetime', default=request.now),
 	Field('name'),
-	Field('category')
+	Field('category'),
+	Field('cover_photo', 'upload')
 )
 
 db.define_table('photos',
 	Field('created_on', 'datetime', default=request.now),
-	Field('image_url'),
+	Field('image', 'upload'),
 	Field('tags')
 )
 

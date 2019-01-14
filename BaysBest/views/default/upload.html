@@ -7,6 +7,7 @@
 <script>
 	var get_tags_url = "{{=URL('api', 'get_tags')}}";
 	var add_tag_url = "{{=URL('api', 'add_tag')}}";
+	var remove_tag_url = "{{=URL('api', 'remove_tag')}}";
 </script>
 {{end}}
 
@@ -21,8 +22,8 @@
 		<div> 
 		- Nature:
 			<div v-for="tag in tags">
-				<div v-if="tag.category == 'Nature'" style="margin-left: 20px">
-					<input type="checkbox"> ${tag.name} </input>
+				<div v-if="tag.category == 'Nature'" style="margin-left: 20px; background-color:white; padding: 5px; padding-left:20px; margin: 5px;">
+					<input type="checkbox"> ${tag.name} </input> <button style="float:right" v-on:click="remove_tag(tag.name)"><i class="fas fa-times"></i></button>
 				</div>
 			</div>
 		</div>
@@ -31,8 +32,8 @@
 		<div> 
 		- Night:
 			<div v-for="tag in tags">
-				<div v-if="tag.category == 'Night'" style="margin-left: 20px">
-					<input type="checkbox"> ${tag.name} </input>
+				<div v-if="tag.category == 'Night'" style="margin-left: 20px; background-color:white; padding: 5px; padding-left:20px; margin: 5px;">
+					<input type="checkbox"> ${tag.name} </input> <button style="float:right" v-on:click="remove_tag(tag.name)"><i class="fas fa-times"></i></button>
 				</div>
 			</div>
 		</div>
@@ -41,8 +42,8 @@
 		<div> 
 		- Urban:
 			<div v-for="tag in tags">
-				<div v-if="tag.category == 'Urban'" style="margin-left: 20px">
-					<input type="checkbox"> ${tag.name} </input>
+				<div v-if="tag.category == 'Urban'" style="margin-left: 20px; background-color:white; padding: 5px; padding-left:20px; margin: 5px;">
+					<input type="checkbox"> ${tag.name} </input> <button style="float:right" v-on:click="remove_tag(tag.name)"><i class="fas fa-times"></i></button>
 				</div>
 			</div>
 		</div>
@@ -51,8 +52,8 @@
 		<div> 
 		- People:
 			<div v-for="tag in tags">
-				<div v-if="tag.category == 'People'" style="margin-left: 20px">
-					<input type="checkbox"> ${tag.name} </input>
+				<div v-if="tag.category == 'People'" style="margin-left: 20px; background-color:white; padding: 5px; padding-left:20px; margin: 5px;">
+					<input type="checkbox"> ${tag.name} </input> <button style="float:right" v-on:click="remove_tag(tag.name)"><i class="fas fa-times"></i></button>
 				</div>
 			</div>
 		</div>
@@ -69,7 +70,7 @@
 			
 			<button v-if="new_tag != ''" v-on:click = "add_tag(new_tag)">Add Tag</button>
 			<input type="text" name="new_tag" v-model="new_tag" v-on:keydown.enter="add_tag(new_tag)">
-			Upload Subcategory Cover: <input type="file" name="img">
+			Upload Subcategory Cover Image: <input type="file" name="img" v-model="subcat_cover">
 		</div>
 		
 	</form>

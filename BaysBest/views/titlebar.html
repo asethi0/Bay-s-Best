@@ -1,6 +1,6 @@
 {{if title != "":}}
-<div class="titlebar">
-	{{=title}}
+<div class="titlebar" id="title_vue">
+	{{=title}} <span v-cloak> ${title_subcat} </span>
 </div>
 {{pass}}
 

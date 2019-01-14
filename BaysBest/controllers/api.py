@@ -18,8 +18,13 @@ def add_tag():
 		if request.vars.name not in tags:
 			db.tags.insert(
 				name = request.vars.name,
-				category = request.vars.category
+				category = request.vars.category,
+				cover_photo = request.vars.cover
 			)
+		return
+		
+def remove_tag():
+		db(db.tags.name == request.vars.name).delete()
 		return
 		
 def upload_photo():

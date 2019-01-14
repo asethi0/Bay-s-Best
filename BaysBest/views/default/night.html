@@ -14,11 +14,11 @@
 <html>
 	<body>
 			<div v-cloak class="plinkcontainer" id="category_div">
-				
-				<div v-for="tag in tags">
-					<a v-if="tag.category == 'Night'">
+				<button v-if="in_subcat" class="back btn large silver" v-on:click="leave_subcat()"> Back </button>
+				<div v-for="tag in tags" v-if="!in_subcat">
+					<a v-if="tag.category == 'Night'" v-on:click="cur_subcat = tag.name; select_subcat();">
 						<div class="nav_photo left">
-							<div class="nav_text"> ${tag.name} </div>
+							<div class="nav_text"> ${tag.name}</div>
 							<img src="{{=URL('static', 'images/nav_photos/nature_btn.png')}}">
 						</div>
 					</a>

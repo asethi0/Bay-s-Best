@@ -34,6 +34,9 @@
          HTML5 elements & feature detects -->
     <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
 		
+		<!-- Fontawesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		
 		<!-- Vue.js-->
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		
@@ -52,13 +55,13 @@
 				
 					<li><a class="btn silver bigbtn" href="{{=URL('default','photos')}}">Photos</a>
 						<ul>
-							<li><a>Nature</a> 
+							<li><a href="{{=URL('default','nature')}}">Nature</a> 
 							</li>
-							<li><a>Night</a> 
+							<li><a href="{{=URL('default','night')}}">Night</a> 
 							</li>
-							<li><a>People</a> 
+							<li><a href="{{=URL('default','people')}}">People</a> 
 							</li>
-							<li><a>Urban</a> 
+							<li><a href="{{=URL('default','urban')}}">Urban</a> 
 							</li>
 						</ul>
 					</li>
